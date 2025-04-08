@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MOATAZ | الصفحة الشخصية</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <style>
     * {
       margin: 0;
@@ -22,7 +23,8 @@
       justify-content: center;
       height: 100vh;
       padding: 40px 20px;
-      overflow: hidden;
+      overflow-x: hidden;
+      transition: all 0.3s ease;
     }
 
     .card {
@@ -92,11 +94,17 @@
       font-size: 18px;
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      align-items: center;
     }
 
     button:hover {
       transform: scale(1.1);
       box-shadow: 0 0 15px rgba(255, 99, 71, 0.8);
+    }
+
+    button i {
+      margin-left: 8px; /* المسافة بين الأيقونة والنص */
     }
 
     .footer {
@@ -115,7 +123,6 @@
       color: #fff;
     }
 
-    /* Parallax effect */
     #particles-js {
       position: absolute;
       top: 0;
@@ -125,16 +132,54 @@
       background-color: #000;
       z-index: -1;
     }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      .card {
+        padding: 30px;
+        max-width: 350px;
+      }
+
+      .card img {
+        width: 150px;
+        height: 150px;
+      }
+
+      button {
+        padding: 10px 25px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px;
+        max-width: 300px;
+      }
+
+      .card img {
+        width: 120px;
+        height: 120px;
+      }
+
+      button {
+        padding: 8px 20px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <img src="https://github.com/Moataz258963/My/blob/main/IMG_20250327_215825_528.jpg"
+    <img src="https://raw.githubusercontent.com/Moataz258963/My/main/IMG_20250327_215825_528.jpg" alt="Moataz">
     <div class="info">
       𝑀𝑌 𝑁𝐴𝑀𝐸 : 𝑀𝑂𝐴𝑇𝐴𝑍<br>
       𝑀𝑌 𝐴𝐺𝐸 : 17<br>
       𝐼 𝐿𝐼𝑉𝐸  : 𝐸𝐺𝑌𝑃𝑇<br><br>
-      ⭐️ 𝐀𝐓 𝐌𝐘 𝐖𝐎𝐑𝐒𝐓 , 𝐼 𝐂𝐴𝐍 𝐷𝐸𝐒𝐓𝐑𝐎𝐘 𝐘𝐎𝐔 𝐖𝐇𝐈𝐋𝐸 𝐘𝐎𝐔 𝐀𝐑𝐄 𝐀𝐓 𝐘𝐎𝐔𝐑 𝐵𝐸𝐒𝐓<br>
+      ⭐️ 𝐀𝐓 𝐌𝐸 𝐖𝐎𝐑𝐒𝐓 , 𝐼 𝐂𝐴𝐍 𝐷𝐸𝐒𝐓𝐑𝐎𝐘 𝐘𝐎𝐔 𝐖𝐇𝐼𝐋𝐸 𝐘𝐎𝐔 𝐀𝐑𝐸 𝐀𝐓 𝐘𝐎𝐔𝐑 𝐵𝐸𝐒𝐓<br>
       ─────────────────────────<br>
       ⭐️ وُانا فــ‌ـي اسـٰٰٰٖٖٖۧـ‌๋ــوُاء حــ۫‌ـاݪاتي اسـٰٰٰٖٖٖۧـ‌๋ــتطُيعـ‌๋‌๋‌‏ـۂ تدِمـٰيࢪڪ وُانت فــ‌ـي أفــ‌ـضــٰـ‌ُـًُݪ حــ۫‌ـاݪاتڪ<br><br>
       𝐵𝑂𝑌𝐾𝐴
@@ -145,16 +190,19 @@
       <a href="https://wa.me/201141847094" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/ll_moataz_ll1" target="_blank" title="إنستجرام"><i class="fab fa-instagram"></i></a>
     </div>
-    <button>اتصل بي</button>
+    <a href="https://t.me/i11_77" target="_blank">
+      <button>
+        <i class="fab fa-telegram"></i> اتصل بي
+      </button>
+    </a>
   </div>
 
   <div class="footer">
     &copy; 2025 Moataz | <a href="https://www.example.com" target="_blank">جميع الحقوق محفوظة</a>
   </div>
 
-  <!-- Parallax background script -->
   <div id="particles-js"></div>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
   <script>
     particlesJS("particles-js", {
       particles: {
@@ -164,6 +212,11 @@
       interactivity: {
         events: { onhover: { enable: true, mode: "repulse" } }
       }
+    });
+
+    window.addEventListener('scroll', () => {
+      const card = document.querySelector('.card');
+      card.style.transform = `translateY(${window.scrollY * 0.1}px)`;
     });
   </script>
 </body>
