@@ -21,7 +21,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       padding: 40px 20px;
       overflow-x: hidden;
       transition: all 0.3s ease;
@@ -32,10 +32,13 @@
       backdrop-filter: blur(10px);
       border-radius: 15px;
       padding: 40px;
+      width: 100%;
       max-width: 400px;
+      min-width: 280px;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      margin: auto;
     }
 
     .card:hover {
@@ -104,7 +107,7 @@
     }
 
     button i {
-      margin-left: 8px; /* المسافة بين الأيقونة والنص */
+      margin-left: 8px;
     }
 
     .footer {
@@ -140,7 +143,6 @@
 
       .card {
         padding: 30px;
-        max-width: 350px;
       }
 
       .card img {
@@ -157,7 +159,6 @@
     @media (max-width: 480px) {
       .card {
         padding: 20px;
-        max-width: 300px;
       }
 
       .card img {
@@ -175,11 +176,12 @@
 <body>
   <div class="card">
     <img src="https://raw.githubusercontent.com/Moataz258963/My/main/IMG_20250327_215825_528.jpg" alt="Moataz">
-    <div class="info">
+
+<div class="info">
       𝑀𝑌 𝑁𝐴𝑀𝐸 : 𝑀𝑂𝐴𝑇𝐴𝑍<br>
       𝑀𝑌 𝐴𝐺𝐸 : 17<br>
       𝐼 𝐿𝐼𝑉𝐸  : 𝐸𝐺𝑌𝑃𝑇<br><br>
-      ⭐️ 𝐀𝐓 𝐌𝐸 𝐖𝐎𝐑𝐒𝐓 , 𝐼 𝐂𝐴𝐍 𝐷𝐸𝐒𝐓𝐑𝐎𝐘 𝐘𝐎𝐔 𝐖𝐇𝐼𝐋𝐸 𝐘𝐎𝐔 𝐀𝐑𝐸 𝐀𝐓 𝐘𝐎𝐔𝐑 𝐵𝐸𝐒𝐓<br>
+      ⭐️ 𝐀𝐓 𝐌𝐸 𝐖𝐎𝐑𝐒𝐓 , 𝐼 𝐶𝐴𝐍 𝐷𝐸𝐒𝐓𝐑𝐎𝐘 𝐘𝐎𝐔 𝐖𝐇𝐼𝐋𝐸 𝐘𝐎𝐔 𝐀𝐑𝐸 𝐀𝐓 𝐘𝐎𝐔𝐑 𝐵𝐸𝐒𝐓<br>
       ─────────────────────────<br>
       ⭐️ وُانا فــ‌ـي اسـٰٰٰٖٖٖۧـ‌๋ــوُاء حــ۫‌ـاݪاتي اسـٰٰٰٖٖٖۧـ‌๋ــتطُيعـ‌๋‌๋‌‏ـۂ تدِمـٰيࢪڪ وُانت فــ‌ـي أفــ‌ـضــٰـ‌ُـًُݪ حــ۫‌ـاݪاتڪ<br><br>
       𝐵𝑂𝑌𝐾𝐴
@@ -216,7 +218,7 @@
 
     window.addEventListener('scroll', () => {
       const card = document.querySelector('.card');
-      card.style.transform = `translateY(${window.scrollY * 0.1}px)`;
+      card.style.transform = translateY(${window.scrollY * 0.1}px);
     });
   </script>
 </body>
